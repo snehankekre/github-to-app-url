@@ -17,7 +17,10 @@ def get_share_url(main_app_github):
 def get_new_url(main_app_github):
     path = main_app_github.replace("https://github.com/", "").replace("/blob", "")
     r = requests.get(f"https://share.streamlit.io/api/v1/disambiguate?path={path}")
-    return "https://" + r.json()["host"]
+    try:
+        return "https://" + r.json()["host"]
+    except:
+        return "Error: " + r.text
 
 
 gh_app = st.text_input("Github URL to main module")
