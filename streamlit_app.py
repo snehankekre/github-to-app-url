@@ -12,7 +12,7 @@ def get_new_url(main_app_github):
         return "Error: " + r.text
 
 
-gh_app = st.text_input("Github URL to main module")
+gh_app = st.text_input("Github URL of main module")
 
 if gh_app:
     st.write("New URL:", get_new_url(gh_app))
