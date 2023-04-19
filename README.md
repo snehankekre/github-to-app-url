@@ -7,8 +7,8 @@ This repository contains a simple Streamlit app that takes the GitHub link to a 
 ## Features
 
 - Accepts a GitHub URL for the main `.py` file of a Streamlit app
-- Generates the Community Cloud app URL if available
-- Displays the Community Cloud app URL or an error message if the URL is not available
+- Fetches the Community Cloud app URL if available
+- Displays the Community Cloud app URL or an error message if the app does not exist
 
 ## Installation
 
@@ -43,4 +43,4 @@ streamlit run streamlit_app.py
 1. Open the app in your browser at `http://localhost:8501`
 2. Enter the GitHub URL of the main `.py` module of your Streamlit app
 3. Click the "Get URL" button or press `Enter`
-4. The app will display the Community Cloud URL or an error message if the URL is not available
+4. The app will display the Community Cloud URL or an error message if the app does not exist
